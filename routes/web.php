@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::resource('films', 'FilmsController');
+
+Route::get('/home', 'HomeController@index')->name('home');
